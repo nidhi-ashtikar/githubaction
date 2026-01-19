@@ -1,0 +1,27 @@
+name: GitHub Action with 2 Jobs
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  job-one:
+    name: First Job
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Run first job command
+        run: echo "This is Job One"
+
+  job-two:
+    name: Second Job
+    runs-on: ubuntu-latest
+    needs: job-one   # runs after job-one
+
+    steps:
+      - name: Run second job command
+        run: echo "This is Job Two"
