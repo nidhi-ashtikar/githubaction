@@ -47,7 +47,7 @@ jobs:
       - name: running commands
         run: |
           python - <<EOF
-          print( Hello this is PYTHON !")
+          print(" Hello this is PYTHON !")
           print(2 + 5 )
           EOF
         
