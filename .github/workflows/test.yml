@@ -1,10 +1,9 @@
 name: GitHub Action with 2 Jobs
 
 on:
-  # push:
-  #   branches:
-  #     - main
-  workflow_dispatch: 
+  push:
+    branches:
+      - main
 
 jobs:
   job-one:
