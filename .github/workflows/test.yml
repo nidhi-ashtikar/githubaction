@@ -44,5 +44,9 @@ jobs:
         uses: actions/setup-python@v6.1.0
         with:
           python-version: '3.14'
+      - name: running commands
+        run: |
+          print( Hello this is PYTHON !")
+          print(2 + 5 )
 
         
